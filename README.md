@@ -29,11 +29,11 @@ Dataset : fashion mnsit
       12)momentum_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for momentum based gradient descent    
       13)nestrov_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-----> code for nestrov gradient descent    
       14)rmsprop(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0) ---------> code for rmsprop    
-      15)adam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)----> code for adam    
-      16)nadam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for nadam    
-      17)mse(pred,label)-----> code for mean squared error loss calculation
-      18)cross_entropy(pred,label)----> code for cross entropy loss calculation
-      19)test_accuracy(weights,bias,test_images,test_labels,mthd)--------> code to calulate the accuracy obtained from training data set
+      15)adam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)----> code for adam      
+      16)nadam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for nadam        
+      17)mse(pred,label)-----> code for mean squared error loss calculation    
+      18)cross_entropy(pred,label)----> code for cross entropy loss calculation    
+      19)test_accuracy(weights,bias,test_images,test_labels,mthd)--------> code to calulate the accuracy obtained from training data set    
       20)train()----> code which starts the training of the model. Using train() method all the above functions will be called recursively as and when needed according to the 
                       configuration selected by sweep
              
