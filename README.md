@@ -10,8 +10,8 @@ Dataset : fashion mnsit
  **Layers used in the network**   
     &nbsp;&nbsp;&nbsp;Option 1: [784,128,64,10]  
     &nbsp;&nbsp;&nbsp;Option 2:[784,32,32,32,10]  
- **Error functions used **    
-    cross entropy and mse  
+ **Error functions used**    
+    &nbsp;&nbsp;&nbsp;cross entropy and mse  
       
     
  **function name ----> description**  
