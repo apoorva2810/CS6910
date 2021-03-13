@@ -15,8 +15,8 @@ Activation Functions used in hidden layers:
     
     
  function name ----> description
-      1)sigmoid(x) ------>code for sigmoid function
-      2)sigmoid_dif(x)---------> code for the differentiation of sigmoid function
+      1)sigmoid(x) ------>code for sigmoid function  
+      2)sigmoid_dif(x)---------> code for the differentiation of sigmoid function  
       3)tanh(x)---> code for tanh function
       4)tanh_dif(x)------> code for differentiation of tanh function
       5)relu(x)----> code for relu function
