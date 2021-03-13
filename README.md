@@ -2,9 +2,9 @@
 
 ## Assignment 1
 Dataset : fashion mnsit
-Optimizers used for training the model[backpropagation]:
+Optimizers used for training the model[backpropagation]:   
     stochastic gradient descent, momemtum based gradient descent,nestrov gradient descent,rmsprop, adam, nadam
-Activation Functions used in hidden layers:  
+Activation Functions used in hidden layers:    
     sigmoid, tanh,relu  
  Softmax function used at the final output layer  
  Layers used in the network   
