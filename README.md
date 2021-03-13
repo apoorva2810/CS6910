@@ -14,23 +14,23 @@ Activation Functions used in hidden layers:
     cross entropy and mse
     
     
- function name ----> description
-      1)sigmoid(x) ------>code for sigmoid function  
-      2)sigmoid_dif(x)---------> code for the differentiation of sigmoid function  
-      3)tanh(x)---> code for tanh function
-      4)tanh_dif(x)------> code for differentiation of tanh function
-      5)relu(x)----> code for relu function
-      6)relu_dif(x)------> code for differentiation of relu function
-      7)softmax(x)----> code  for softmax function
-      8)initialize_network(layer_size_list,mthd)--------> used to initialize the weights and biases in two ways i.e random and xavier
-      9)forward_propagation(x,weights,bias,mthd)-------> code for forward propagation method
-      10)back_propagation(x,y,weights,bias,mthd)-------> code for backward propagation method
-      11)stochastic_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0,batch_size=10)-------> code for stochastic gradient          descent
-      12)momentum_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for momentum based gradient descent
-      13)nestrov_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-----> code for nestrov gradient descent
-      14)rmsprop(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0) ---------> code for rmsprop
-      15)adam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)----> code for adam
-      16)nadam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for nadam
+ function name ----> description  
+      1)sigmoid(x) ------>code for sigmoid function    
+      2)sigmoid_dif(x)---------> code for the differentiation of sigmoid function    
+      3)tanh(x)---> code for tanh function  
+      4)tanh_dif(x)------> code for differentiation of tanh function  
+      5)relu(x)----> code for relu function    
+      6)relu_dif(x)------> code for differentiation of relu function    
+      7)softmax(x)----> code  for softmax function    
+      8)initialize_network(layer_size_list,mthd)--------> used to initialize the weights and biases in two ways i.e random and xavier    
+      9)forward_propagation(x,weights,bias,mthd)-------> code for forward propagation method    
+      10)back_propagation(x,y,weights,bias,mthd)-------> code for backward propagation method    
+      11)stochastic_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0,batch_size=10)-------> code for stochastic gradient          descent    
+      12)momentum_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for momentum based gradient descent    
+      13)nestrov_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-----> code for nestrov gradient descent    
+      14)rmsprop(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0) ---------> code for rmsprop    
+      15)adam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)----> code for adam    
+      16)nadam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for nadam    
       17)mse(pred,label)-----> code for mean squared error loss calculation
       18)cross_entropy(pred,label)----> code for cross entropy loss calculation
       19)test_accuracy(weights,bias,test_images,test_labels,mthd)--------> code to calulate the accuracy obtained from training data set
