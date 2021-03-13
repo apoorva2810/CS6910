@@ -2,19 +2,19 @@
 
 ## Assignment 1
 Dataset : fashion mnsit  
-Optimizers used for training the model[backpropagation]:     
+**Optimizers used for training the model[backpropagation]:**     
     stochastic gradient descent, momemtum based gradient descent,nestrov gradient descent,rmsprop, adam, nadam  
-Activation Functions used in hidden layers:      
+**Activation Functions used in hidden layers:**      
     sigmoid, tanh,relu    
- Softmax function used at the final output layer    
- Layers used in the network   
-    Option 1: [784,128,64,10]  
-    Option 2:[784,32,32,32,10]  
- Error functions used  
+ **Softmax function used at the final output layer**    
+ **Layers used in the network**   
+    &nbsp;&nbsp;&nbsp;Option 1: [784,128,64,10]  
+    &nbsp;&nbsp;&nbsp;Option 2:[784,32,32,32,10]  
+ **Error functions used **
     cross entropy and mse  
       
     
- function name ----> description  
+ **function name ----> description**  
       1)sigmoid(x) ------>code for sigmoid function    
       2)sigmoid_dif(x)---------> code for the differentiation of sigmoid function    
       3)tanh(x)---> code for tanh function  
