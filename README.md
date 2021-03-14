@@ -8,8 +8,8 @@ Dataset : fashion mnsit
     &nbsp;&nbsp;&nbsp;sigmoid, tanh,relu    
  **Softmax function used at the final output layer**    
  **Layers used in the network**   
-    &nbsp;&nbsp;&nbsp;Option 1: [784,128,64,10]  
-    &nbsp;&nbsp;&nbsp;Option 2:[784,32,32,32,10]  
+    &nbsp;&nbsp;&nbsp;option for hidden layer 1 (from input end) are 128 and 64    
+    &nbsp;&nbsp;&nbsp;options for hidden layer 2 (from input end) are 64 and 32   
  **Error functions used**    
     &nbsp;&nbsp;&nbsp;cross entropy and mse  
       
