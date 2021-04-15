@@ -1,17 +1,9 @@
 # CS6910
 
-## Assignment 1
-Dataset : fashion mnsit  
-**Optimizers used for training the model[backpropagation]:**     
-    &nbsp;&nbsp;&nbsp;stochastic gradient descent, momemtum based gradient descent,nestrov gradient descent,rmsprop, adam, nadam  
-**Activation Functions used in hidden layers:**      
-    &nbsp;&nbsp;&nbsp;sigmoid, tanh,relu    
- **Softmax function used at the final output layer**    
- **Layers used in the network**   
-    &nbsp;&nbsp;&nbsp;option for hidden layer 1 (from input end) are 128 and 64    
-    &nbsp;&nbsp;&nbsp;options for hidden layer 2 (from input end) are 64 and 32   
- **Error functions used**    
-    &nbsp;&nbsp;&nbsp;cross entropy and mse  
+## Assignment 2
+Dataset : inaturalist  
+PART A &nbsp; &nbsp;
+<br />gdhgj
       
     
  **function name ----> description**  
