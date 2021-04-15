@@ -1,33 +1,22 @@
 # CS6910
 
 ## Assignment 2
-Dataset : inaturalist  
-PART A &nbsp; &nbsp;
-<br />gdhgj
+Dataset : inaturalist 
+<br />&nbsp; &nbsp;Train Images : 4500 images 
+<br />&nbsp; &nbsp;Validation Images : 500 Images
+<br />&nbsp; &nbsp; Test Images : 1000 Images
+**PART A** &nbsp; &nbsp;
+<br />&nbsp; &nbsp; The images used for training/validating/testing the CNN model are of dimensions 350 x 350 x 3
+<br />&nbsp; &nbsp; Before running the model , we need to preprocess the images.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; We have changed the images to Numpy Array first and then rescaled the images so that the pixel values are between 0 and 1.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; We have divided the 'Training data' into Train Data and Validation Data. Validation data comprises of 10% of the 'Training data' that is used &nbsp; &nbsp; &nbsp; &nbsp;for hyperparameter tuning
+<br />&nbsp; &nbsp; &nbsp; &nbsp; Then we change the labels of the train/validation/test images to categorical values using the to_categorical() function
+<br />&nbsp; &nbsp; &nbsp; &nbsp; Now, we will define the model structure using model_run()
+<br />&nbsp; &nbsp; &nbsp; &nbsp; train() function will actually call the model_run() function internally and report the accuracy of the model that has been chosen by sweep &nbsp; &nbsp; &nbsp; &nbsp; configuration
+
+
       
-    
- **function name ----> description**  
-      1)sigmoid(x) ------>code for sigmoid function    
-      2)sigmoid_dif(x)---------> code for the differentiation of sigmoid function    
-      3)tanh(x)---> code for tanh function  
-      4)tanh_dif(x)------> code for differentiation of tanh function  
-      5)relu(x)----> code for relu function    
-      6)relu_dif(x)------> code for differentiation of relu function    
-      7)softmax(x)----> code  for softmax function    
-      8)initialize_network(layer_size_list,mthd)--------> used to initialize the weights and biases in two ways i.e random and xavier    
-      9)forward_propagation(x,weights,bias,mthd)-------> code for forward propagation method    
-      10)back_propagation(x,y,weights,bias,mthd)-------> code for backward propagation method    
-      11)stochastic_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0,batch_size=10)-------> code for stochastic    gradient   descent    
-      12)momentum_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for momentum based gradient descent    
-      13)nestrov_gradient_descent(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-----> code for nestrov gradient descent    
-      14)rmsprop(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0) ---------> code for rmsprop    
-      15)adam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)----> code for adam      
-      16)nadam(weights,bias,epochs,layers_size_list,train_images,train_labels,learning_rate,mthd,alpha=0)-------> code for nadam        
-      17)mse(pred,label)-----> code for mean squared error loss calculation    
-      18)cross_entropy(pred,label)----> code for cross entropy loss calculation    
-      19)test_accuracy(weights,bias,test_images,test_labels,mthd)--------> code to calulate the accuracy obtained from training data set    
-      20)train()----> code which starts the training of the model. Using train() method all the above functions will be called recursively as and when needed according to the 
-                      configuration selected by sweep
+      
              
  
 
