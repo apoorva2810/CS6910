@@ -26,6 +26,11 @@ Dataset : inaturalist
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *ResNet50
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *InceptionResNetV2
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *Xception
+<br />&nbsp; &nbsp; &nbsp; &nbsp;create_model() is used to initialize the chosen pretrained model by imagenet weights. 
+<br />&nbsp; &nbsp; &nbsp; &nbsp;Then we call model_layer_freeze() is used to freeze the appropriate hidden layers based on sweep configuration.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; Finally testModel() is called to run the model and report the train/test accuracy 
+<br />&nbsp; &nbsp;The best performing models that we encountered with the inaturalist dataset after all the experiments are InceptionResNetV2 and Xception
+
 
 
       
