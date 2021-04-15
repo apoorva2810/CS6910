@@ -30,6 +30,14 @@ Dataset : inaturalist
 <br />&nbsp; &nbsp; &nbsp; &nbsp;Then we call model_layer_freeze() is used to freeze the appropriate hidden layers based on sweep configuration.
 <br />&nbsp; &nbsp; &nbsp; &nbsp; Finally testModel() is called to run the model and report the train/test accuracy 
 <br />&nbsp; &nbsp;The best performing models that we encountered with the inaturalist dataset after all the experiments are InceptionResNetV2 and Xception
+<br />&nbsp; **PART C** &nbsp; &nbsp;
+<br />&nbsp; &nbsp; &nbsp; &nbsp;We have used a YOLO model that has been trained on images having Ambulances . This model is hence efficient enough to detect ambulances in real &nbsp; &nbsp; &nbsp; &nbsp;time scenarios.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; We have tested the model on a test video . The performance of the model can be viewed on the given link 
+<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[YOLO Ambulance Detection](https://www.youtube.com/watch?v=t65xGPpDVCw)
+
+
+
+
 
 
 
