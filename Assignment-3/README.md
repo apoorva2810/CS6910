@@ -9,7 +9,7 @@ Dataset :  Dakshina dataset released by Google
 <br />&nbsp; &nbsp; The target hindi words have been preprocessed by adding '\t' and '\n' to each of the words in the given dataset
 <br />&nbsp; &nbsp; The input data and target data of training dataset have been converted into one hot vectors and later we have used embedding on top of that.
 <br />&nbsp; &nbsp; &nbsp; &nbsp;For Test data set, we have used one hot encoding for input text , not for target text.
-<br />&nbsp; &nbsp; &nbsp; &nbsp; The model that we have built for seq2seq learning is based on character level modelling.Hence, it gives us character level accuracy. To  get the word level accuracy we have built the custom function ValAcc2().  
+<br />&nbsp; &nbsp; &nbsp; &nbsp; The model that we have built for seq2seq learning is based on character level modelling.Hence, it gives us character level accuracy.<br />&nbsp; &nbsp; &nbsp; &nbsp; To  get the word level accuracy we have built the custom function ValAcc2().  
 <br />&nbsp; &nbsp; &nbsp; &nbsp; model_run() function is being called to build the custom model.
 <br />&nbsp; &nbsp; &nbsp; &nbsp; model_run() function also builds the suitable inference model 
 <br />&nbsp; &nbsp; &nbsp; &nbsp; decode_sequence() function has been built to provide the predicted hindi words. Function decode_sequence1() is for single layer of encoder and decoder  model .Function decode_sequence2() is for 2 stacked layers of encoder and decoder models.
@@ -22,11 +22,12 @@ Dataset :  Dakshina dataset released by Google
 <br />&nbsp; **WITH ATTENTION** &nbsp; &nbsp;
 <br />&nbsp; &nbsp; &nbsp; &nbsp;Similar preprocessing has been done before building the seq2seq model with attention layer
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; The attention layer has been built on GRU model with single layer of encoder and decoder layers.
+<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; the attention layer has been built with the help of attention.py from src: <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; https://github.com/thushv89/attention_keras/blob/322a16ee147122026b63305aaa5e899d9e5de883/src/layers/attention.py
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;ValAcc2(), decode-sequence1(), beam_search_decoder() has been built for the same purpose as above
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;The model_run() function internally calls all the other functions and returns the accuracy needed
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Our best model with attention layer has recorded the test accuracy of 23.25% for one layer of encoder and decoder 
 <br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; We have also uploaded all the predictions made by this model in predictions_attention folder
-<br />&nbsp; &nbsp; &nbsp; &nbsp;we have also created the attention heatmaps for 10 input words from test dataset. The heatmap images have been stored in the &nbsp; <br />&nbsp; &nbsp; &nbsp;Attentions_heatmap_images folder
+<br />&nbsp; &nbsp; &nbsp; &nbsp;we have also created the attention heatmaps for 10 input words from test dataset. The heatmap images have been stored in the &nbsp; <br />&nbsp; &nbsp; &nbsp;&nbsp;Attentions_heatmap_images folder
 
 
 
