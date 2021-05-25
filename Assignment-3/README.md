@@ -1,39 +1,34 @@
 # CS6910
 
-## Assignment 2
-Dataset : inaturalist 
-<br />&nbsp; &nbsp;Train Images : 4500 images 
-<br />&nbsp; &nbsp;Validation Images : 500 Images
-<br />&nbsp; &nbsp; Test Images : 1000 Images
-<br />&nbsp; **PART A** &nbsp; &nbsp;
-<br />&nbsp; &nbsp; The images used for training/validating/testing the CNN model are of dimensions 350 x 350 x 3
-<br />&nbsp; &nbsp; Before running the model , we need to preprocess the images.
-<br />&nbsp; &nbsp; &nbsp; &nbsp; We have changed the images to Numpy Array first and then rescaled the images so that the pixel values are between 0 and 1.
-<br />&nbsp; &nbsp; &nbsp; &nbsp; We have divided the 'Training data' into Train Data and Validation Data. Validation data comprises of 10% of the 'Training data' that is used &nbsp; &nbsp; &nbsp; &nbsp;for hyperparameter tuning
-<br />&nbsp; &nbsp; &nbsp; &nbsp; Then we change the labels of the train/validation/test images to categorical values using the to_categorical() function
-<br />&nbsp; &nbsp; &nbsp; &nbsp; Now, we will define the model structure using model_run()
-<br />&nbsp; &nbsp; &nbsp; &nbsp; train() function will actually call the model_run() function internally and report the accuracy of the model that has been chosen by sweep &nbsp; &nbsp; &nbsp; &nbsp; configuration
-<br />&nbsp; &nbsp; &nbsp; &nbsp; The best test accuracy reported by our CNN model is 35.5 %
-<br />&nbsp; &nbsp; &nbsp; &nbsp; We have also visualized the filters of the first hidden layer of the model for a random image . 
-<br />&nbsp; &nbsp; &nbsp; &nbsp; We have also plotted 30 images from our test dataset with their predicted and actual labels.
-<br />&nbsp; &nbsp; &nbsp; &nbsp; Finally , Guided Backpropagation on a random image has been done. 
-<br />&nbsp; &nbsp; &nbsp; &nbsp; All the results/plots are displayed in the report.
+## Assignment 3
+Dataset :  Dakshina dataset released by Google
+<br />&nbsp; &nbsp;Train words : 44204 words
+<br />&nbsp; &nbsp;Validation words : 4358 words
+<br />&nbsp; &nbsp; Test words : 4502 words
+<br />&nbsp; **WITHOUT ATTENTION LAYER** &nbsp; &nbsp;
+<br />&nbsp; &nbsp; The target hindi words have been preprocessed by adding '\t' and '\n' to each of the words in the given dataset
+<br />&nbsp; &nbsp; The input data and target data of training dataset have been converted into one hot vectors and later we have used embedding on top of that.
+<br />&nbsp; &nbsp; &nbsp; &nbsp;For Test data set, we have used one hot encoding for input text , not for target text.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; The model that we have built for seq2seq learning is based on character level modelling.Hence, it gives us character level accuracy. To  get the word level accuracy we have built the custom function ValAcc2().  
+<br />&nbsp; &nbsp; &nbsp; &nbsp; model_run() function is being called to build the custom model.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; model_run() function also builds the suitable inference model 
+<br />&nbsp; &nbsp; &nbsp; &nbsp; decode_sequence() function has been built to provide the predicted hindi words. Function decode_sequence1() is for single layer of encoder and decoder  model .Function decode_sequence2() is for 2 stacked layers of encoder and decoder models.
+<br />&nbsp; &nbsp; &nbsp; &nbsp; beam_search_decoder() function has been built so that while predicting the words in decode_sequence() function , the beam search <br />&nbsp; &nbsp; &nbsp; &nbsp; algorithm can also be incorporated to provide better accuracy
+<br />&nbsp; &nbsp; &nbsp; &nbsp; model_run() function internally calls all the other above mentioned functions and provides us with the validation/test accuracy 
+<br />&nbsp; &nbsp; &nbsp; &nbsp; The best model for seq2seq learning has been built on GRU and has recorded the test accuracy of 33.8% for 2 layers of encoder and decoder
+<br />&nbsp; &nbsp; &nbsp; &nbsp; All the predictions have been saved in the predictions_vanilla folder
+<br />&nbsp; &nbsp; &nbsp; &nbsp; 
 
-<br />&nbsp; **PART B** &nbsp; &nbsp;
-<br />&nbsp; &nbsp; &nbsp; &nbsp;The pretrained models that we have used while working on this project are as follows :
-<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *VGG16
-<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *VGG19
-<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *ResNet50
-<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *InceptionResNetV2
-<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; *Xception
-<br />&nbsp; &nbsp; &nbsp; &nbsp;create_model() is used to initialize the chosen pretrained model by imagenet weights. 
-<br />&nbsp; &nbsp; &nbsp; &nbsp;Then we call model_layer_freeze() is used to freeze the appropriate hidden layers based on sweep configuration.
-<br />&nbsp; &nbsp; &nbsp; &nbsp; Finally testModel() is called to run the model and report the train/test accuracy 
-<br />&nbsp; &nbsp;The best performing models that we encountered with the inaturalist dataset after all the experiments are InceptionResNetV2 and Xception
-<br /><br /><br />&nbsp; **PART C** &nbsp; &nbsp;
-<br />&nbsp; &nbsp; &nbsp; &nbsp;We have used a YOLO model that has been trained on images having Ambulances . This model is hence efficient enough to detect ambulances in real &nbsp; &nbsp; &nbsp; &nbsp;time scenarios.
-<br />&nbsp; &nbsp; &nbsp; &nbsp; We have tested the model on a test video . The performance of the model can be viewed on the given link 
-<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[YOLO Ambulance Detection](https://www.youtube.com/watch?v=t65xGPpDVCw)
+<br />&nbsp; **WITH ATTENTION** &nbsp; &nbsp;
+<br />&nbsp; &nbsp; &nbsp; &nbsp;Similar preprocessing has been done before building the seq2seq model with attention layer
+<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; The attention layer has been built on GRU model with single layer of encoder and decoder layers.
+<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;ValAcc2(), decode-sequence1(), beam_search_decoder() has been built for the same purpose as above
+<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;The model_run() function internally calls all the other functions and returns the accuracy needed
+<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Our best model with attention layer has recorded the test accuracy of 23.25% for one layer of encoder and decoder 
+<br />&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; We have also uploaded all the predictions made by this model in predictions_attention folder
+<br />&nbsp; &nbsp; &nbsp; &nbsp;we have also created the attention heatmaps for 10 input words from test dataset. The heatmap images have been stored in the &nbsp; <br />&nbsp; &nbsp; &nbsp;Attentions_heatmap_images folder
+
+
 
 
 
